@@ -57,7 +57,7 @@ class Player(CircleShape):
         if keys[pygame.K_s]:
             Player.move(self, -dt)
         
-        if keys[pygame.K_SPACE]:
+        if keys[pygame.K_SPACE]: #can only shoot if enough time has passed (0.3) seconds
             if self.timer <= 0:
                 Player.shoot(self)
 
